@@ -3,10 +3,10 @@ for _, loco in pairs(data.raw["locomotive"]) do
 	-- In vanilla, reduce locomotives from 259 km/h to 86 km/h (fuel bonuses
 	-- still apply).
 	loco.max_speed = 0.4 -- Base 1.2
-	-- Reduce braking force (slow down more slowly).
-	loco.braking_force = 0.5 -- Base 10
-	-- Increase friction force (speed up more slowly).
-	loco.friction_force = 5 -- Base 0.5
+	-- Increase weight (speed up more slowly, slow down a little more slowly).
+	loco.weight = 20000 -- Base 2000
+	-- Reduce braking force (slow down more slowly, more effective than weight).
+	loco.braking_force = 0.1 -- Base 10
 end
 
 -- Adjust advanced fuel acceleration values, so they aren't as high as vanilla.
