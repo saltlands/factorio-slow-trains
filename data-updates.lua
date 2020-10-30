@@ -4,9 +4,14 @@ for _, loco in pairs(data.raw["locomotive"]) do
 	-- still apply).
 	loco.max_speed = 0.4 -- Base 1.2
 	-- Increase weight (speed up more slowly, slow down a little more slowly).
-	loco.weight = 20000 -- Base 2000
+	loco.weight = 10000 -- Base 2000
 	-- Reduce braking force (slow down more slowly, more effective than weight).
 	loco.braking_force = 0.1 -- Base 10
+end
+
+for _, wagon in pairs(data.raw["cargo-wagon"]) do
+	-- Increase weight (speed up more slowly, slow down a little more slowly).
+	wagon.weight = 5000 -- Base 1000
 end
 
 -- Adjust advanced fuel acceleration values, so they aren't as high as vanilla.
